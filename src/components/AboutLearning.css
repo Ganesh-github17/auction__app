@@ -1,0 +1,258 @@
+/* Shared styles for About, Learning, Profile and Rules sections */
+.about-auction,
+.learning-center,
+.profile-section,
+.rules-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Typography */
+h2 {
+  color: #1a365d;
+  font-size: 2.75rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  color: #2d3748;
+  font-size: 2rem;
+  margin: 2rem 0 1.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #3498db;
+  border-radius: 3px;
+}
+
+h4 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  font-weight: 500;
+}
+
+/* Content sections */
+.auction-description,
+.learning-content,
+.profile-content,
+.rules-content {
+  line-height: 1.8;
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+.auction-types,
+.auction-benefits,
+.auction-process,
+.profile-section > div {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.auction-types:hover,
+.auction-benefits:hover,
+.auction-process:hover,
+.profile-section > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 1.2rem 0;
+  padding-left: 2rem;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+li:before {
+  content: '•';
+  color: #3498db;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+li strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-auction,
+  .learning-center,
+  .profile-section,
+  .rules-section {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .auction-types,
+  .auction-benefits,
+  .auction-process,
+  .profile-section > div {
+    padding: 1.5rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about-auction,
+.learning-center,
+.profile-section,
+.rules-section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Quiz section */
+.quiz-section {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.question-section {
+  text-align: center;
+}
+
+.question-count {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.question-text {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.answer-options {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.answer-options button {
+  background: #fff;
+  border: 2px solid #3498db;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.answer-options button:hover {
+  background: #3498db;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Score section */
+.score-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.score-section h4 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.score-section p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.score-section button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.score-section button:hover {
+  background: #2980b9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-auction,
+  .learning-center {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .answer-options {
+    grid-template-columns: 1fr;
+  }
+}
